@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-     <a href="mailto:contact@wemake.services">Связатсья со мной по email</a>
+     <a href="mailto:andrus1115@gmail.com">Связатсья со мной по email</a>
     </p>
     <p>
      <a href="tel:+79819151655">+7 (981) 915-16-55</a>
