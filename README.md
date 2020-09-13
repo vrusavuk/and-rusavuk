@@ -1,4 +1,4 @@
-# hello-world
+# Andrey Rusavuk's single-page website
 
 ## Project setup
 ```
