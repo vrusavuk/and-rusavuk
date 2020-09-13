@@ -1,7 +1,14 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div class="container">
+  <div
+       class="container__image">
+    <div class="container__info container__author">Пресвитер Церкви</a></div>
+    <div class="container__info container__location">"Тихая Пристань"</div>
+
+  </div>
+</div>
+    <HelloWorld msg="Андрей Русавук"/>
   </div>
 </template>
 
@@ -16,3 +23,101 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+
+* {
+  box-sizing: border-box;
+}
+body {
+  display:flex;
+  
+  align-items:center;
+  justify-content:center;  
+  height: 100vh;
+  margin: 0;
+  
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  background-color:#f4f6f8;
+}
+.container{
+  display:flex;
+  
+  align-items:center;
+  justify-content:center;
+  height:100%;
+  width:100%;
+  
+  overflow:hidden;
+
+  &__image{
+    position:relative;
+    display:flex;
+    
+    flex-direction:column;
+    justify-content:center;
+    width:250px;
+    height:250px;
+    
+    border-radius:50%;
+    background-image:url('../assets/andrey.jpg');
+    background-size:cover;
+    transition: ease-in-out .3s;
+    
+    z-index:2;
+    &:before{
+      content: ' ';
+      position:absolute;
+      
+      width:100%;
+      height:100%;
+      top:0;
+      bottom:0;
+      left:0;
+      margin:auto;
+      
+      background: inherit;
+      background-position:bottom;
+      filter:blur(40px) saturate(0%);
+      transform:scaleX(0.4);
+      transition:ease-in-out .4s;
+      border-radius:120px;
+      transform-origin:right;
+      opacity:0;
+      
+      z-index:-1;
+    }
+    .container__info{
+      position:relative;
+      
+      line-height:1.8;
+      transition:ease-in-out .3s;
+      opacity:0;
+    }
+    .container__location{
+      transition-delay: .15s;
+    }
+    &:hover{
+      border-radius:0;
+      width:450px;
+      height:310px;
+      
+      box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.04), 0px 2px 6px rgba(9, 55, 53, 0.08), 0px 16px 24px rgba(9, 55, 53, 0.1), 0px 24px 32px rgba(9, 55, 53, 0.14);
+      &:before{
+        width:100%;
+        
+        opacity: 0.22;
+        filter:blur(10px) saturate(100%);
+        transform:scale(2.8) translate3d(-18%, 0px, 0px);
+      }
+      
+      .container__info{
+        transform:translate3d(-70%,0px,0px);
+        opacity:1;
+      }
+    }
+  }
+}
+
+</style>
