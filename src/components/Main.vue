@@ -9,7 +9,7 @@
     </p>
     <div class="andrey-rusavuk-navigation">
       <nav class="navigation-bar">
-        <a href="https://bible.and-rusavuk.ru">проповеди</a> | <a href="https://medium.com/@vrusavuk">статьи</a>
+        <a href="https://bible.and-rusavuk.ru">проповеди</a> | <a href="https://bible.and-rusavuk.ru/propovedi">статьи</a>
       </nav>
     </div>
   </div>
@@ -17,7 +17,7 @@
 
 <script>
 export default {
-  name: 'HelloWorld',
+  name: 'Main',
   props: {
     msg: String
   }
